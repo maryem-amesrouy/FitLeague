@@ -9,90 +9,119 @@
     <title>FitLeague</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/data.js"></script>
+    <script src="./data.js"></script>
 
 
 
 </head>
 
-
-
 <body>
-
-    <div class=" bg-[#E2E8F0] p-4 max-h-100vh flex flex-col gap-5">
-        <div class="bg-white flex flex-col gap-3 border rounded-xl p-7 ">
-            <div>
+    <form action="/action_page.php">
+        <div class=" bg-[#E2E8F0] p-4 max-h-100vh flex flex-col gap-5">
+            <div class="bg-white flex flex-col gap-3 border rounded-xl p-7 ">
                 <div>
-                    <h5 class="font-medium ">01 / Le défi <br></h5>
-                </div>
-                <div class=" font-medium text-gray-600 dark:text-gray-400 text-xs">Les informations que verront tous les
-                    participants.</div>
-            </div>
-            <div>
-                <div class="text-xs font-medium ">
-                    <h6>Nom du défi <span class="text-red-600">*</span></h6>
-                </div>
-                <div class=" border rounded-xl bg-white p-2 w-80% text-xs">Les foulées de novembre</div>
-            </div>
-            <div>
-                <div class="text-xs font-medium ">
-                    <h5>Description</h5>
-                </div>
-                <div class=" border rounded-xl bg-white p-2 w-80% text-xs">On garde notre élan en novembre ! Cumulez vos
-                    sorties à votre rythme et atteignez 80 km avant la
-                    fin du
-                    mois.</div>
-            </div>
-        </div>
-        <div class="bg-white flex flex-col gap-3 border rounded-xl p-7">
-            <div class="text-xs font-medium ">
-                <h5>02 / L’objectif et les dates</h5>
-            </div>
-            <div class="flex flex-col gap-3">
-
-                <div class=" flex flex-col gap-3 ">
                     <div>
-                        <div class="text-xs font-medium ">Objectif par participant <span class="text-red-600">*</span>
+                        <h5 class="font-medium ">01 / Le défi <br></h5>
+                    </div>
+                    <div class=" font-medium text-gray-600 dark:text-gray-400 text-xs">Les informations que verront tous
+                        lesparticipants.</div>
+                </div>
+                <div>
+                    <div class="text-xs font-medium ">
+                        <h6>Nom du défi <span class="text-red-600">*</span></h6>
+                    </div>
+                    <div class="text-xs font-medium ">
+
+                        <select id="nomDefi" type="text"
+                            class=" border rounded-xl bg-white p-2 w-full text-xs text-gray-500 outline-none "
+                            required>>
+                            <option>Vélo</option>
+                            <option>Randonnée</option>
+                            <option>Renforcement</option>
+                            <option>Natation</option>
+                            <option>Marche</option>
+                            <option>Running</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-xs font-medium ">
+                        <h5>Description</h5>
+                    </div>
+                    <input id="descriptionDefi" type="text"
+                        placeholder="On garde notre élan en novembre ! Cumulez vos sorties à votre rythme et atteignez 80 km avant la fin du mois."
+                        class=" border rounded-xl bg-white p-2 w-full text-xs text-gray-500 outline-none">
+                </div>
+            </div>
+            <div class="bg-white flex flex-col gap-3 border rounded-xl p-7">
+                <div class="text-xs font-medium ">
+                    <h5>02 / L’objectif et les dates</h5>
+                </div>
+                <div class="flex flex-col gap-3">
+
+                    <div class=" flex flex-col gap-3 ">
+                        <div>
+                            <div class="text-xs font-medium">Objectif par participant <span
+                                    class="text-red-600">*</span>
+                            </div>
+                            <input id="objectifDefi" type="text" placeholder="80"
+                                class=" border rounded-xl bg-white p-2 w-full text-xs text-gray-500 outline-none"
+                                required>
                         </div>
-                        <div class=" border rounded-xl bg-white p-2 w-80% text-xs">80</div>
+                        <div>
+                            <div class="text-xs font-medium ">Unité <span class="text-red-600">*</span></div>
+                            <div class="text-xs font-medium ">
+                                <select id="uniteDefi" type="text"
+                                    class=" border rounded-xl bg-white p-2 w-full text-xs text-gray-500 outline-none ">>
+                                    <option>Kilomètres (km)</option>
+                                    <option>m</option>
+                                    <option>min</option>
+                                    <option>cycle</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <div class="text-xs font-medium ">Unité <span class="text-red-600">*</span></div>
-                        <div class=" border rounded-xl bg-white p-2 w-80% text-xs">Kilomètres (km)</div>
+                    <div class=" flex flex-col gap-3 ">
+                        <div>
+                            <div class="text-xs font-medium ">Date de début <span class="text-red-600">*</span></div>
+                            <input id="dateDebutDefi" type="text" placeholder="01/11/2026"
+                                class=" border rounded-xl bg-white p-2 w-full text-xs text-gray-500 outline-none"
+                                required>
+                        </div>
+                        <div>
+                            <div class="text-xs font-medium ">Date de fin <span class="text-red-600">*</span></div>
+                            <input id="dateFinDefi" type="text" placeholder="30/11/2026"
+                                class=" border rounded-xl bg-white p-2 w-full text-xs text-gray-500 outline-none"
+                                required>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bg-white flex flex-col gap-3 border rounded-xl p-7">
+                <div>
+                    <h5 class="text-xs font-medium ">Photo</h5>
+                </div>
+                <div class="flex justify-center">
+                    <p> <button class=" border rounded-xl bg-white p-2 w-60 h-20 text-xs flex justify-center">+ Ajouter
+                            une
+                            photo </button></p>
+                </div>
+            </div>
+            <div class="bg-white flex justify-end gap-3 border rounded-xl p-7">
+                <div class="flex justify-end gap-5">
+                    <div><button id="btnAnnuler" type="submit"
+                            class="rounded-full border rounded-xl bg-white p-2 text-xs  ">Annuler</button></div>
+                    <div><button id="btnCreer" type="submit"
+                            class="rounded-full border rounded-xl p-2 text-xs border bg-[#C1F75B] ">+ Créer le
+                            défi</button>
                     </div>
                 </div>
-                <div class=" flex flex-col gap-3 ">
-                    <div>
-                        <div class="text-xs font-medium ">Date de début <span class="text-red-600">*</span></div>
-                        <div class=" border rounded-xl bg-white p-2 w-80% text-xs">01/11/2026</div>
-                    </div>
-                    <div>
-                        <div class="text-xs font-medium ">Date de fin <span class="text-red-600">*</span></div>
-                        <div class=" border rounded-xl bg-white p-2 w-80% text-xs">30/11/2026 </div>
-                    </div>
-                </div>
-
             </div>
+
+
         </div>
-        <div class="bg-white flex flex-col gap-3 border rounded-xl p-7">
-            <div>
-                <h5 class="text-xs font-medium ">Photo</h5>
-            </div>
-            <div class="flex justify-center">
-                <p class=" border rounded-xl bg-white p-2 w-60 h-20 text-xs flex justify-center ">+ Ajouter une photo
-                </p>
-            </div>
-        </div>
-        <div class="bg-white flex justify-end gap-3 border rounded-xl p-7">
-            <div class="flex justify-end gap-5">
-                <div><button class="rounded-full border rounded-xl bg-white p-2 text-xs ">Annuler</button></div>
-                <div><button class="rounded-full border rounded-xl p-2 text-xs border bg-[#C1F75B] ">+ Créer ledéfi</button></div>
-            </div>
-        </div>
-
-
-    </div>
-
+    </form>
 
 </body>
 
