@@ -27,7 +27,7 @@ difis.forEach(difi => {
               <img src="./assets/icones/persone.png" alt="" class="w-5 h-5">
               <p class="w-40">${difi.participants}</p>
             </div>
-            <a href="3" class="rounded-md border p-2 bg-black text-white">+ Rejoindre</a>
+            <a href="#" class=" boutont data-difi-id="${difi.id}"  rounded-md border p-2 bg-black text-white hover:bg-gray-500 ">+ Rejoindre</a>
           </div>
            
           `
@@ -35,3 +35,42 @@ difis.forEach(difi => {
           cart.innerHTML += card
     
 });
+
+
+
+
+let btn = document.querySelectorAll(".boutont")
+
+let bntSelectionner =[]
+let idDifis;
+let bntSE = false;
+
+btn.forEach(bntSlc =>{
+    bntSlc.addEventListener("click",function(e){
+        idDifis = e.target.dataset.difiId
+         bntSE = !bntSE
+        if (!bntSE) {
+         bntSlc.classList.replace("bg-black","bg-[#C1F75B]")
+        bntSlc.textContent= "En cours"
+      }else{ bntSlc.classList.replace("bg-[#C1F75B]", "bg-black")
+        bntSlc.textContent= "+ Rejoindre "}
+      
+})})
+
+// <a class="bg-[#C1F75B] flex items-center justify-center  rounded-md text-sm w-40  hover:bg-gray-200 ">+ Créer mon défi</a>
+
+let creer = document.getElementById("créerDifis")
+let btnCreer=[]
+let defisSlc = false
+creerDifis.addEventListener("click", function() {
+   defisSlc=!defisSlc
+  if(defisSlc){
+     creerDifis.classList.replace("bg-[#C1F75B]","bg-white")
+     creerDifis.classList.replace("text-black", "text-white")
+  }else{
+    creerDifis.classList.replace("bg-white", "bg-[#C1F75B]")
+     creerDifis.classList.replace("text-white","text-black")
+
+  }
+  
+})

@@ -22,7 +22,7 @@ let difis =[
     },
 
     {
-        id : 2,
+        id : 3,
         affichage: "assets/images/renforcement.png",
         genre: "15 jours pour se dépasser",
         description: "20 minutes par jour. Une version plus forte de toi..",
