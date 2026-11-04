@@ -1,8 +1,5 @@
 
 
-
-
-
 let cart = document.getElementById("lesDifis")
 
 difis.forEach(difi => {
@@ -13,21 +10,22 @@ difis.forEach(difi => {
           <h3 class="font-extrabold">${difi.genre}</h3>
           <p class="text-[#737970] text-xs">${difi.description}</p>
 
-          <div class="distance flex justify-between">
-            <div  class="flex ">
-             <img src="./assets/icones/distance.png" alt="km">
-             <p class="w-40" >${difi.distance}</p>
+          <div class="distance flex justify-between h-10 ">
+            <div  class="flex items-center ">
+             <img src="./assets/icones/distance.png" alt="km" class="h-4 ">
+             <p  >${difi.distance} ${difi.unite }</p>
             </div>
-            <p>${difi.date}</p>
+            <p class="flex items-center ">${difi.dateDebut} ${difi.dateFin}</p>
+            
            
           </div>
 
-          <div class="participen flex justify-between border-t-1">
-            <div class="flex">
+          <div class="participen flex justify-between items-center h-20  border-t-2 border-[#E0E4DC]">
+            <div class="flex ">
               <img src="./assets/icones/persone.png" alt="" class="w-5 h-5">
               <p class="w-40">${difi.participants}</p>
             </div>
-            <a href="#" class=" boutont data-difi-id="${difi.id}"  rounded-md border p-2 bg-black text-white hover:bg-gray-500 ">+ Rejoindre</a>
+            <a href="indexPartic.html" class=" boutont  rounded-md border p-2 bg-black text-white hover:bg-gray-500 data-difi-id="${difi.id}"   ">+ Rejoindre</a>
           </div>
            
           `
@@ -41,6 +39,8 @@ difis.forEach(difi => {
 
 let btn = document.querySelectorAll(".boutont")
 
+ 
+
 let bntSelectionner =[]
 let idDifis;
 let bntSE = false;
@@ -50,7 +50,7 @@ btn.forEach(bntSlc =>{
         idDifis = e.target.dataset.difiId
          bntSE = !bntSE
         if (!bntSE) {
-         bntSlc.classList.replace("bg-black","bg-[#C1F75B]")
+         bntSlc.classList.replace("bg-black", "bg-[#C1F75B]")
         bntSlc.textContent= "En cours"
       }else{ bntSlc.classList.replace("bg-[#C1F75B]", "bg-black")
         bntSlc.textContent= "+ Rejoindre "}
@@ -74,3 +74,59 @@ creerDifis.addEventListener("click", function() {
   }
   
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ================================================================================================================
+
+
+
+
+
+  
+const btnRejoindre = document.getElementById("bntRejoindreParticipent")
+const formulaire = document.getElementById("fourmulaireARejoidre")
+const btnAquiter = document.getElementsById("quiter")
+
+// ouvrire.addEventListener("click", e =>{
+//   formulaire.classList.add('show')
+
+// })
+// fermer.addEventListener("click", e =>{
+//   formulaire.classList.remove('show')
+
+// })
+
