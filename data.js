@@ -1,12 +1,20 @@
 
-let sports = [
-    {name: "Vélo", id: 101},
-    {name: "Randonnée", id: 102}, 
-    {name: "Renforcement", id: 103}, 
-    {name: "Natation", id: 104}, 
-    {name: "Marche", id: 105}, 
-    {name: "Running", id: 106}
-] 
+let sport = [
+    {
+        id: 3,
+        affichage: "assets/images/renforcement.png",
+        genre: "Renfocement",
+        description: "20 minutes par jour. Une version plus forte de toi..",
+        distance: "15 ",
+        unite: " m D+",
+        dateDebut: "26 oct",
+        dateFin: "-15 nov",
+        participants: "62 participants",
+
+    }
+]
+
+
 
 const forms = document.getElementById("forms")
 const nomDefi = document.getElementById("nomDefi")
@@ -16,18 +24,36 @@ const uniteDefi = document.getElementById("uniteDefi")
 const dateDebutDefi = document.getElementById("dateDebutDefi")
 const dateFinDefi = document.getElementById("dateFinDefi")
 
-let sport = []
-forms.addEventListener("submit", function(event){
-    if(objectifDefi == /^[0-9]{1,2}$/){
-        sport.push
+console.log(sport)
+
+forms.addEventListener("submit", function (event) {
+    event.preventDefault()
+
+    if (/^[0-9]{1,3}$/.test(objectifDefi.value)) {
+       
+    } else {
+        objectifDefi.value = ""
     }
-    if(nomDefi ==  nomDefi.value){
-        sport.push
+    if (/^[a-zA-Z0-9\s]{2,100}$/.test(descriptionDefi.value)) {
+    } else {
+        descriptionDefi.value = ""
     }
-    if(descriptionDefi == descriptionDefi.value){
-        sport.push
+
+    let defi = {
+        genre : nomDefi.value,
+        description : descriptionDefi.value,
+        distance : objectifDefi.value,
+        unite : uniteDefi.value,
+        dateDebut : dateDebutDefi.value,
+        dateFin : dateFinDefi.value,
+        participants : value = 0
+
     }
-    if 
+    sport.push(defi)
+
+    localStorage.setItem("sport", JSON.stringify(sport))
+
+    console.log(sport)
 
 })
 
