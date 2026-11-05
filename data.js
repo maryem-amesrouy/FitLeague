@@ -36,6 +36,7 @@ let difis = [
 
 const saved = localStorage.getItem("defi")
 if (saved) {
+    
     difis = JSON.parse(saved)
 }
 
