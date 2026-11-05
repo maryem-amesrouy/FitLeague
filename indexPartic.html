@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F2F2F7]  ">
+   
+
+   <nav class="flex flex-row justify-between  items-center m-6 ">
+      <div class="flex flex-row text-20px">
+        <!-- <img src="./assets/icones/logot.png" alt="logots" class="w-5 h-5 bg-black rounded-md  "/> -->
+        <p class="font-bold text-[20px] p">Fit<span class="text-[#C1F75B] text-[20px] font-bold">League</span></p>
+      </div>
+      <div class="flex flex-row justify-between w50% gap-4">
+      <ul  class="flex flex-row justify-araound gap-4 color-#475569 bg-#E2E8F0 " >
+        <li><a href="index.html">Actualités</a></li>
+        <li><a href="#">Defis</a></li>
+        <li><a href="indexPartic.html">Clasement</a></li>
+      </ul>
+      <a href="#" class="bg-[#C1F75B] rounded-2xl text-[15px] w-7 h-7 flex items-center  ">AM</a>
+      </div>
+    </nav>
+
+
+
+    <main >
+
+            <div class="flex justify-between m-6">
+                <div>
+                    <p class=" text-[#737970] text-sm">TA COMMUNAUTÉ EN MOUVEMENT</p>
+                    <h1 class="text-[20px] font-extrabold">Participants</h1>
+                    <p class=" text-[#737970] text-sm">Rassemble ton équipe, gère les profils et lance les prochains défis.</p>
+                </div>
+                <a href="#" class="bg-[#C1F75B] rounded-2xl w-40 h-10 text-[14px] flex justify-center items-center "  id="bntRejoindreParticipent">+Ajouter un participant</a>
+            </div>
+
+            <div id="fourmulaireARejoidre">
+                    <form class="flex-col">
+                        <div>
+                        <label for="nom">NOM DU PARTICIPANT</label>
+                        <input for="nom" type="text" class="rounded-2xl h-10">
+                        </div>
+                        <div>
+                        <label for="pseudo">pseude</label>
+                        <input type="text" for="pseudo"  class="rounded-2xl h-10">
+                        </div>
+                        <div>
+                        <label for="defis">DÉFIS REJOINTS</label>
+                        <input type="defis"  class="rounded-2xl h-10">
+                        </div>
+
+                        <button class="rounded-2xl text-white bg-black w-60 h-10" onclick="hide-pup()" id="quiter" >+ Rejoindre</button>
+                        
+                    </form>
+
+            </div>
+
+
+
+            <div class="bg-white rounded-2xl m-6 flex flex-col justify-center p-6 " >
+                <div>
+                    <h2>Toute l’équipe</h2>
+                    <input type="search" name="gsearch">
+                </div>
+
+
+                <div >
+                    <table style="width:100%  ">
+                        <tr class="bg-[#F0F6E7] border rounded-2xl ">
+                            <td>NOM DU PARTICIPANTl</td>
+                            <td>PSEUDO</td>
+                            <td>DÉFIS REJOINTS</td>
+                            <td>ACTIONS</td>
+                        </tr>
+                        <hr>
+                        <tr class="border-t-2 border-[#E0E4DC]">
+                           
+                           <td>Julien Petit </td>
+                           <td> @julien_run</td>
+                           <td >200 km, zéro excuse</td>
+                           <td class="flex items-center"><img src="./assets/icones/modifier.png" class="w-4 h-4 border rounded-sm " > <img src="./assets/icones/effacer.png" ></td>
+                       </tr>
+                        <tr class="border-t-2 border-[#E0E4DC]">
+                           
+                           <td> Nora Bernard</td>
+                           <td> @nora_ber</td>
+                           <td >Le cap des 100 km</td>
+                           <td class="flex items-center"><img src="./assets/icones/modifier.png" class="w-4 h-4 border rounded-sm " > <img src="./assets/icones/effacer.png" ></td>
+                       </tr>
+                        <tr class="border-t-2 border-[#E0E4DC]">
+                           
+                           <td> Sarah Martin </td>
+                           <td> @sarah_m</td>
+                           <td >Le sommet nous attend</td>
+                           <td class="flex items-center"><img src="./assets/icones/modifier.png" class="w-4 h-4 border rounded-sm " > <img src="./assets/icones/effacer.png" ></td>
+                       </tr>
+                       
+                    </table>
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+    <footer class="flex justify-evenly p-7">
+      
+      <div >
+        <div class="flex ">
+        <!-- <img src="./assets/icones/logot.png" alt="logots" class="w-5 h-5 bg-black rounded-md  "/> -->
+        <p class="font-bold text-[20px]">Fit<span class="text-[#C1F75B] text-[20px] font-bold">League</span></p>
+        </div>
+        <div>
+        <p>Ensemble, on se dépasse !
+            <br>Créez des défis, suivez vos 
+            <br> performances et progressez
+            <br> avec vos amis.</p>
+      </div>
+      </div>
+
+      <div>
+        <p class="text-[#757575] font-bold">Navigation</p>
+        <ul  class=" color-#475569 bg-#E2E8F0 " >
+        <li><a href="index.html">Actualités</a></li>
+        <li><a href="#">Defis</a></li>
+        <li><a href="indexPartic.html">Clasement</a></li>
+      </ul>
+      </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
