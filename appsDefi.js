@@ -15,10 +15,11 @@ const dateFinDefi = document.getElementById("dateFinDefi")
 
 forms.addEventListener("submit", function (event) {
     event.preventDefault()
-console.log("ok");
+
 
     console.log(nomDefi.value);
     
+
 
     if (/^[0-9]{1,3}$/.test(objectifDefi.value)) {
       
