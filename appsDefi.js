@@ -1,6 +1,6 @@
 
 // -------- Créer le défi -----------
-console.log("ok");
+
 
 
 
@@ -15,7 +15,6 @@ const dateFinDefi = document.getElementById("dateFinDefi")
 
 forms.addEventListener("submit", function (event) {
     event.preventDefault()
-
 
     console.log(nomDefi.value);
     
@@ -50,11 +49,17 @@ forms.addEventListener("submit", function (event) {
         participants: 0
 
     }
+
+     const saved = localStorage.getItem("difis")
+    const liste = saved ? JSON.parse(saved) : [...difis]
     difis.push(defi)
 
-    localStorage.setItem("sport", JSON.stringify(difis))
+    localStorage.setItem("defi", JSON.stringify(difis))
+
+    
 
     window.location.href = "index.html";
+    cardDifis()
 }) 
 
 
