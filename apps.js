@@ -76,6 +76,62 @@ creerDifis.addEventListener("click", function() {
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ================================================================================================================
+
+
+
+
+
+  
+const btnRejoindre = document.getElementById("bntRejoindreParticipent")
+const formulaire = document.getElementById("fourmulaireARejoidre")
+const btnAquiter = document.getElementsById("quiter")
+
+// ouvrire.addEventListener("click", e =>{
+//   formulaire.classList.add('show')
+
+// })
+// fermer.addEventListener("click", e =>{
+//   formulaire.classList.remove('show')
+
+// })
+
+
+
+
+
+
 // -------- Créer le défi -----------
 
 
@@ -131,57 +187,4 @@ forms.addEventListener("submit", function (event) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ================================================================================================================
-
-
-
-
-
-  
-const btnRejoindre = document.getElementById("bntRejoindreParticipent")
-const formulaire = document.getElementById("fourmulaireARejoidre")
-const btnAquiter = document.getElementsById("quiter")
-
-// ouvrire.addEventListener("click", e =>{
-//   formulaire.classList.add('show')
-
-// })
-// fermer.addEventListener("click", e =>{
-//   formulaire.classList.remove('show')
-
-// })
 

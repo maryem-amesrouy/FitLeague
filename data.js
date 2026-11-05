@@ -1,3 +1,4 @@
+
 let difis = [
     {
         id: 1,
@@ -29,9 +30,10 @@ let difis = [
         distance: "15 séances",
         date: "26 oct. – 9 nov",
         participants: "62 participantss",
-
     }
 ]
+
+
 
 
 
