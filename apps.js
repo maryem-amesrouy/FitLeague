@@ -59,7 +59,7 @@ btn.forEach(bntSlc =>{
 
 // <a class="bg-[#C1F75B] flex items-center justify-center  rounded-md text-sm w-40  hover:bg-gray-200 ">+ Créer mon défi</a>
 
-let creer = document.getElementById("créerDifis")
+let creer = document.getElementById("creerDifis")
 let btnCreer=[]
 let defisSlc = false
 creerDifis.addEventListener("click", function() {
@@ -86,6 +86,8 @@ creerDifis.addEventListener("click", function() {
 
 
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -107,6 +109,7 @@ creerDifis.addEventListener("click", function() {
 
 
 
+>>>>>>> 65ada3fb95a2e19bba0310f3fe989e3c42e4f84e
 // ================================================================================================================
 
 
@@ -127,6 +130,8 @@ const btnAquiter = document.getElementsById("quiter")
 
 // })
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -188,3 +193,4 @@ forms.addEventListener("submit", function (event) {
 
 
 
+>>>>>>> 65ada3fb95a2e19bba0310f3fe989e3c42e4f84e
